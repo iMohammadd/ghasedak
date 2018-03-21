@@ -1,0 +1,19 @@
+{
+    "name": "aries/ghasedak",
+    "description": "Iranian SMS Provider",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mohammad Mohammadi",
+            "email": "imohammadd@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Aries\\Ghasedak\\": "src"
+        }
+    }
+}
