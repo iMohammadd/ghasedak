@@ -9,7 +9,6 @@ class Kavenegar extends BaseProvider implements BaseInterface {
 
     use Request;
 
-
     public function __construct()
     {
         $this->init();
@@ -77,7 +76,7 @@ class Kavenegar extends BaseProvider implements BaseInterface {
         $this->URLBuilder("sms/send.json");
 
         //return $this->API_BASE;
-        $result = $this->sendRequest($this->API_BASE, $this->params, true);
+        $result = $this->sendRequest($this->API_BASE, $this->params);
 
         return $result;
     }
@@ -99,7 +98,7 @@ class Kavenegar extends BaseProvider implements BaseInterface {
         $this->URLBuilder("sms/sendarray.json");
 
         //return $this->API_BASE;
-        $result = $this->sendRequest($this->API_BASE, $this->params, true);
+        $result = $this->sendRequest($this->API_BASE, $this->params);
 
         return $result;
     }
@@ -114,7 +113,7 @@ class Kavenegar extends BaseProvider implements BaseInterface {
 
         $this->URLBuilder("/sms/cancel.json");
 
-        return $this->sendRequest($this->API_BASE, $this->params, true);
+        return $this->sendRequest($this->API_BASE, $this->params);
     }
 
     public function getStatus()
@@ -127,7 +126,7 @@ class Kavenegar extends BaseProvider implements BaseInterface {
 
         $this->URLBuilder('/sms/status.json');
 
-        return $this->sendRequest($this->API_BASE, $this->params, true);
+        return $this->sendRequest($this->API_BASE, $this->params);
     }
 
     public function getMessage()
@@ -140,7 +139,7 @@ class Kavenegar extends BaseProvider implements BaseInterface {
 
         $this->URLBuilder('/sms/select.json');
 
-        return $this->sendRequest($this->API_BASE, $this->params, true);
+        return $this->sendRequest($this->API_BASE, $this->params);
     }
 
     public function getMessages()
@@ -154,7 +153,7 @@ class Kavenegar extends BaseProvider implements BaseInterface {
 
         $this->URLBuilder('sms/receive.json');
 
-        $result = $this->sendRequest($this->API_BASE, $this->params, true);
+        $result = $this->sendRequest($this->API_BASE, $this->params);
 
         return $result;
     }
@@ -165,7 +164,7 @@ class Kavenegar extends BaseProvider implements BaseInterface {
 
         $this->URLBuilder('/account/info.json');
 
-        return $this->sendRequest($this->API_BASE, $this->params, true);
+        return $this->sendRequest($this->API_BASE, $this->params);
     }
 
     public function init()

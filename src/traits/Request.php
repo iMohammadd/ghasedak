@@ -3,7 +3,7 @@ namespace Aries\Ghasedak\Traits;
 
 trait Request {
 
-    private function sendRequest($url, $params, $toObject = false)
+    private function sendRequest($url, $params, $toArray = false)
     {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, "{$url}");
@@ -12,7 +12,7 @@ trait Request {
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
         $res = curl_exec($ch);
         curl_close($ch);
-        return json_decode($res, $toObject);
+        return json_decode($res, $toArray);
     }
 
     private function ParameterBuilder($params)
